@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini CRM</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Mini CRM - Lead Management</h1>
+
+    <div class="form-box">
+      <h3 id="formTitle">Add New Lead</h3>
+      <form id="leadForm">
+        <div class="form-row">
+          <input type="text" id="name" placeholder="Name *" required>
+          <input type="email" id="email" placeholder="Email *" required>
+        </div>
+        <div class="form-row">
+          <input type="tel" id="phone" placeholder="Phone">
+          <select id="source">
+            <option value="Website">Website</option>
+            <option value="Referral">Referral</option>
+            <option value="Social Media">Social Media</option>
+          </select>
+        </div>
+        <textarea id="notes" placeholder="Notes"></textarea>
+        <div class="btn-group">
+          <button type="submit" id="submitBtn">Add Lead</button>
+          <button type="button" id="cancelBtn" style="display:none;">Cancel</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="stats">Total Leads: <span id="totalLeads">0</span></div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th><th>Email</th><th>Phone</th><th>Source</th>
+          <th>Status</th><th>Notes</th><th>Date</th><th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="leadsBody"></tbody>
+    </table>
+    <div id="noData" class="no-data">No leads yet. Add your first lead above!</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
